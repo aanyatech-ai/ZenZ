@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #f1f5fd;
+    --card-bg: rgba(255, 255, 255, 0.82);
+    --card-border: rgba(99, 102, 241, 0.18);
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --accent-glow: rgba(79, 172, 254, 0.25);
+  }
+
+  .dark {
+    --bg-primary: #070913;
+    --card-bg: rgba(14, 19, 41, 0.72);
+    --card-border: rgba(99, 102, 241, 0.22);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent-glow: rgba(0, 242, 254, 0.2);
+  }
+
+  body {
+    font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Glassmorphism primitives */
+.glass-panel {
+  background: var(--card-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--card-border);
+}
+
+.glass-panel-interactive {
+  background: var(--card-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--card-border);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-interactive:hover {
+  border-color: rgba(0, 242, 254, 0.45);
+  box-shadow: 0 8px 30px -8px var(--accent-glow);
+  transform: translateY(-2px);
+}
+
+.glass-panel-interactive:active {
+  transform: scale(0.985);
+}
+
+/* Neon Glow Accents */
+.neon-border-cyan {
+  border-color: rgba(0, 242, 254, 0.5);
+  box-shadow: 0 0 15px -3px rgba(0, 242, 254, 0.3);
+}
+
+.neon-border-purple {
+  border-color: rgba(157, 78, 221, 0.5);
+  box-shadow: 0 0 15px -3px rgba(157, 78, 221, 0.3);
+}
+
+.neon-text-glow {
+  text-shadow: 0 0 12px rgba(0, 242, 254, 0.5);
+}
+
+/* Custom Cosmic Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 242, 254, 0.4);
+}
+
+/* Accessibility: Reduced motion overrides */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+  }
+}

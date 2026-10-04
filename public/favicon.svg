@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="zenzFavJelly" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C084FC" />
+      <stop offset="50%" stop-color="#F472B6" />
+      <stop offset="100%" stop-color="#FDBA74" />
+    </linearGradient>
+    <radialGradient id="zenzFavBlush" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F43F5E" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#F43F5E" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <path d="M 50,14 C 74,14 88,28 88,52 C 88,74 74,86 50,86 C 26,86 12,74 12,52 C 12,28 26,14 50,14 Z" fill="url(#zenzFavJelly)" />
+  <ellipse cx="40" cy="32" rx="22" ry="12" transform="rotate(-20 40 32)" fill="#FFFFFF" fill-opacity="0.45" />
+  <ellipse cx="38" cy="48" rx="4.5" ry="6" fill="#1E1B4B" />
+  <ellipse cx="62" cy="48" rx="4.5" ry="6" fill="#1E1B4B" />
+  <circle cx="36.5" cy="45.5" r="1.8" fill="#FFFFFF" />
+  <circle cx="60.5" cy="45.5" r="1.8" fill="#FFFFFF" />
+  <circle cx="28" cy="56" r="5" fill="url(#zenzFavBlush)" />
+  <circle cx="72" cy="56" r="5" fill="url(#zenzFavBlush)" />
+  <path d="M 44,55 Q 50,61 56,55" stroke="#1E1B4B" stroke-width="2.5" stroke-linecap="round" fill="none" />
+  <circle cx="50" cy="10" r="3.5" fill="#FDE047" />
+</svg>
